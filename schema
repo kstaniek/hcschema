@@ -34,8 +34,8 @@
         },
         "sortOrder": {
             "type" : "number"
-        },
-        
+        }
+    },  
     "required" : [
         "id",
         "name",
