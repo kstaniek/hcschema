@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "Fibaro Home Center Binary Light JSON Schema",
-	"name": "binary_light",
+    "name": "binary_light",
     "type": "object",
     "properties" : {
         "id" : { 
