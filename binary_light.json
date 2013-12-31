@@ -32,71 +32,71 @@
                     "type": "string"
                 },
                 "classConfigure": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "classGeneric": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "classSupport": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "classVersion": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "dead": { 
                     "type": "string" 
                 },
-				"deviceControlType": {
-					"type": "string"
-				},
-				"deviceIcon": {
-					"type": "string"
-				},
+                "deviceControlType": {
+                    "type": "string"
+                },
+                "deviceIcon": {
+                    "type": "string"
+                },
                 "disabled" : { 
                     "type" : "string"
                 },
-				"emailNotificationID": {
-                	"type": "string"
-				},
-				"emailNotificationType": {
-                	"type": "string"
-            	},
+                "emailNotificationID": {
+                    "type": "string"
+                },
+                "emailNotificationType": {
+                    "type": "string"
+                },
                 "endPoint": {
                     "type": "string"
                 },
                 "isBatteryOperated": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "isLight": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "liliOffCommand": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "liliOnCommand": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "log": {
                     "type": "string"
                 },
                 "logTemp": {
                     "type": "string"
                 },
-				"needConfigure": {
-					"type": "string"
-				},
+                "needConfigure": {
+                    "type": "string"
+                },
                 "nodeID": {
                     "type": "string"
                 },
                 "parametersTemplate": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "parentID": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "pollingRetryError": {
-					"type": "string"
-				},
+                    "type": "string"
+                },
                 "pollingTime": {
                     "type": "string"
                 },
@@ -113,8 +113,8 @@
                     "type": "string"
                 },
                 "pushNotificationType": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "requestNodeNeighborState": {
                     "type": "string"
                 },
@@ -122,32 +122,32 @@
                     "type": "string"
                 },
                 "saveLogs": {
-					"enum" : ["0", "1"]
-				},
-		        "showChildren": {
+                    "enum" : ["0", "1"]
+                },
+                "showChildren": {
                     "enum" : ["0", "1"]
                 },
                 "smsNotificationID": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "smsNotificationType": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "sortOrder": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "type": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "unit": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "useTemplate": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "userDescription": {
-					"type" : "string"
-				},
+                    "type" : "string"
+                },
                 "value": {
                     "type" : "string"
                 },
@@ -189,77 +189,77 @@
                 }
             },
             "required": [
-		        "UIMessageSendTime",
-				"classConfigure",
-				"classGeneric",
-				"classSupport",
-				"classVersion",
-		        "dead",
-				"deviceControlType",
-				"deviceIcon",
-				"disabled",
-				"emailNotificationID",
-				"emailNotificationType",
-		        "endPoint",
-				"isBatteryOperated",
-				"isLight",
-				"liliOffCommand",
-				"liliOnCommand",
-		        "log",
-		        "logTemp",
-				"needConfigure",
-		        "nodeID",
-				"parametersTemplate",
-				"parentID",
-				"pollingRetryError",
-		        "pollingTime",
-		        "pollingTimeNext",
-		        "pollingTimeSec",
-		        "productInfo",
-				"pushNotificationID",
-				"pushNotificationType",
-		        "requestNodeNeighborState",
-		        "requestNodeNeighborStateTimeStemp",
-		        "saveLogs",
-		        "showChildren",
-				"smsNotificationID",
-				"smsNotificationType",
-				"sortOrder",
-				"type",
-				"unit",
-				"useTemplate",
-				"userDescription",
-		        "value",
-		        "zwaveCompany",
-		        "zwaveInfo",
-		        "zwaveVersion"  
+                "UIMessageSendTime",
+                "classConfigure",
+                "classGeneric",
+                "classSupport",
+                "classVersion",
+                "dead",
+                "deviceControlType",
+                "deviceIcon",
+                "disabled",
+                "emailNotificationID",
+                "emailNotificationType",
+                "endPoint",
+                "isBatteryOperated",
+                "isLight",
+                "liliOffCommand",
+                "liliOnCommand",
+                "log",
+                "logTemp",
+                "needConfigure",
+                "nodeID",
+                "parametersTemplate",
+                "parentID",
+                "pollingRetryError",
+                "pollingTime",
+                "pollingTimeNext",
+                "pollingTimeSec",
+                "productInfo",
+                "pushNotificationID",
+                "pushNotificationType",
+                "requestNodeNeighborState",
+                "requestNodeNeighborStateTimeStemp",
+                "saveLogs",
+                "showChildren",
+                "smsNotificationID",
+                "smsNotificationType",
+                "sortOrder",
+                "type",
+                "unit",
+                "useTemplate",
+                "userDescription",
+                "value",
+                "zwaveCompany",
+                "zwaveInfo",
+                "zwaveVersion"  
             ],
-			"additionalProperties": false
+            "additionalProperties": false
         },
         "actions": {
             "type": "object",
             "properties": {
-			    "pollingTimeSec": {
-			        "type": "number"
-			    },
-			    "requestNodeNeighborUpdate": {
-			        "type": "number"
-			    },
-			    "turnOff": {
-			        "type": "number"
-			    },
-			    "turnOn": {
-			        "type": "number"
-			    }
-			},
-		    "required": [
-		         "pollingTimeSec",
-		         "requestNodeNeighborUpdate",
-		         "turnOff",
-		         "turnOn"
-			],
-			"additionalProperties": false
-		},
+                "pollingTimeSec": {
+                    "type": "number"
+                },
+                "requestNodeNeighborUpdate": {
+                    "type": "number"
+                },
+                "turnOff": {
+                    "type": "number"
+                },
+                "turnOn": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                 "pollingTimeSec",
+                 "requestNodeNeighborUpdate",
+                 "turnOff",
+                 "turnOn"
+            ],
+            "additionalProperties": false
+        },
         "created": {
             "type" : "number"
         },
@@ -269,7 +269,7 @@
         "sortOrder": {
             "type" : "number"
         }
-	},
+    },
     "definitions" : {
         "associationItem" : {
             "properties" : {
@@ -287,5 +287,5 @@
             }
         }
     },
-	"additionalProperties": false
+    "additionalProperties": false
 }
