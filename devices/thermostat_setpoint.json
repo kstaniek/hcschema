@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "Fibaro Home Center Binary Light JSON Schema",
-    "name": "binary_light",
+    "name": "thermostat_setpoint",
     "type": "object",
     "properties" : {
         "id" : { 
@@ -22,7 +22,7 @@
         "type": {
             "description" : "Zwave device type",
             "enum": [ 
-                "binary_light"
+                "thermostat_setpoint"
             ]
         },
         "properties": {
@@ -30,6 +30,13 @@
             "properties": {
                 "UIMessageSendTime": { 
                     "type": "string"
+                },
+                "batteryLevel": {
+                    "type": "string",
+                    "format": "^[0-9]([0-9]){1}"
+                },
+                "batteryLowNotification": {
+                    "enum": ["0", "1"]
                 },
                 "classConfigure": {
                     "type": "string"
@@ -65,16 +72,7 @@
                     "type": "string"
                 },
                 "isBatteryOperated": {
-                    "type": "string"
-                },
-                "isLight": {
-                    "type": "string"
-                },
-                "liliOffCommand": {
-                    "type": "string"
-                },
-                "liliOnCommand": {
-                    "type": "string"
+                    "enum": ["0", "1"]
                 },
                 "log": {
                     "type": "string"
@@ -136,20 +134,29 @@
                 "sortOrder": {
                     "type" : "string"
                 },
-                "type": {
-                    "type" : "string"
+                "targetLevel": {
+                    "type": "string"
+                },
+                "dupa": {
+                    "enum": ["dupa"]
+                },
+                "timeStamp": {
+                    "type": "string"
                 },
                 "unit": {
                     "type" : "string"
                 },
                 "useTemplate": {
-                    "type" : "string"
+                    "enum" : ["0", "1"]
                 },
                 "userDescription": {
-                    "type" : "string"
+                    "type": "string"
                 },
                 "value": {
-                    "type" : "string"
+                    "type": "string"
+                },
+                "wakeUpTime": {
+                    "type": "string"
                 },
                 "zwaveCompany": {
                     "type" : "string"
@@ -190,6 +197,8 @@
             },
             "required": [
                 "UIMessageSendTime",
+                "batteryLevel",
+                "batteryLowNotification",
                 "classConfigure",
                 "classGeneric",
                 "classSupport",
@@ -202,9 +211,6 @@
                 "emailNotificationType",
                 "endPoint",
                 "isBatteryOperated",
-                "isLight",
-                "liliOffCommand",
-                "liliOnCommand",
                 "log",
                 "logTemp",
                 "needConfigure",
@@ -225,11 +231,13 @@
                 "smsNotificationID",
                 "smsNotificationType",
                 "sortOrder",
-                "type",
+                "targetLevel",
+                "timeStamp",
                 "unit",
                 "useTemplate",
                 "userDescription",
                 "value",
+                "wakeUpTime",
                 "zwaveCompany",
                 "zwaveInfo",
                 "zwaveVersion"  
@@ -245,10 +253,19 @@
                 "requestNodeNeighborUpdate": {
                     "type": "number"
                 },
+                "setTargetLevel": {
+                    "type": "number"
+                },
+                "setTime": {
+                    "type": "number"
+                },
                 "turnOff": {
                     "type": "number"
                 },
                 "turnOn": {
+                    "type": "number"
+                },
+                "wakeUpTime": {
                     "type": "number"
                 }
             },

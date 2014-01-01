@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "Fibaro Home Center Weather JSON Schema",
-	"name": "weather",
+    "name": "weather",
     "type": "object",
     "properties" : {
         "id" : { 
@@ -18,7 +18,7 @@
             "description" : "Room ID defined in Home Center GUI",
             "type" : "integer",
             "minimum" : 0,
-			"maximum" : 0
+            "maximum" : 0
         },
         "type": {
             "description" : "Zwave device type",
@@ -29,90 +29,90 @@
         "properties": {
             "type": "object",
             "properties": {
-				"ConditionCode": { 
+                "ConditionCode": { 
                     "type": "string"
                 },
-				"Humidity": { 
+                "Humidity": { 
                     "type": "string"
                 },
-				"PreviousConditionCode": { 
+                "PreviousConditionCode": { 
                     "type": "string"
                 },
-				"PreviousHumidity": { 
+                "PreviousHumidity": { 
                     "type": "string"
                 },
-				"PreviousTemperature": { 
+                "PreviousTemperature": { 
                     "type": "string"
                 },
-				"PreviousWeatherConditionConverted": { 
+                "PreviousWeatherConditionConverted": { 
                     "type": "string"
                 },
-				"PreviousWind": { 
+                "PreviousWind": { 
                     "type": "string"
                 },
-				"Temperature": { 
+                "Temperature": { 
                     "type": "string"
                 },
-				"WeatherCondition": { 
+                "WeatherCondition": { 
                     "type": "string"
                 },
-				"WeatherConditionConverted": { 
+                "WeatherConditionConverted": { 
                     "type": "string"
                 },
-				"Wind": { 
+                "Wind": { 
                     "type": "string"
                 },
-				"saveLogs": { 
+                "saveLogs": { 
                     "enum" : ["0", "1"]
                 },
-	            "parameters" : {
-	                "type" : "array",
-	                "minItems" : 0,
-	                "items" : { "type" : "object",
-	                    "properties" : {
-	                        "id" : { "type" : "number" },
-	                        "size" : { "type" : "number"},
-	                        "value" : { "type" : "number"},
-	                        "lastSetValue" : { "type" : "number"}
-	                    }
-	                },
-	                "uniqueItems" : false
-	            },
-	            "associationView" : {
-	                "type" : "array",
-	                "minItems" : 0,
-	                "maxItems" : 3,
-	                "items" : { "$ref": "#/definitions/associationItem" }
+                "parameters" : {
+                    "type" : "array",
+                    "minItems" : 0,
+                    "items" : { "type" : "object",
+                        "properties" : {
+                            "id" : { "type" : "number" },
+                            "size" : { "type" : "number"},
+                            "value" : { "type" : "number"},
+                            "lastSetValue" : { "type" : "number"}
+                        }
+                    },
+                    "uniqueItems" : false
+                },
+                "associationView" : {
+                    "type" : "array",
+                    "minItems" : 0,
+                    "maxItems" : 3,
+                    "items" : { "$ref": "#/definitions/associationItem" }
             
-	            },
-	            "associationSet" : {
-	                "type" : "array",
-	                "minItems" : 0,
-	                "maxItems" : 3,
-	                "items" : { "$ref": "#/definitions/associationItem" }
+                },
+                "associationSet" : {
+                    "type" : "array",
+                    "minItems" : 0,
+                    "maxItems" : 3,
+                    "items" : { "$ref": "#/definitions/associationItem" }
             
-	            }
+                }
             },
             "required": [
-				"ConditionCode",
-				"Humidity",
-				"PreviousConditionCode",
-				"PreviousHumidity",
-				"PreviousTemperature",
-				"PreviousWeatherConditionConverted",
-				"PreviousWind",
-				"Temperature",
-				"WeatherCondition",
-				"WeatherConditionConverted",
-				"Wind",
-				"saveLogs"  
+                "ConditionCode",
+                "Humidity",
+                "PreviousConditionCode",
+                "PreviousHumidity",
+                "PreviousTemperature",
+                "PreviousWeatherConditionConverted",
+                "PreviousWind",
+                "Temperature",
+                "WeatherCondition",
+                "WeatherConditionConverted",
+                "Wind",
+                "saveLogs"  
             ],
-			"additionalProperties": false
+            "additionalProperties": false
         },
-		"actions": {
-			"type": "object"
-		},
-		"created": {
+        "actions": {
+            "type": "object"
+        },
+        "created": {
             "type" : "number"
         },
         "modified": {
@@ -121,7 +121,7 @@
         "sortOrder": {
             "type" : "number"
         }
-	},
+    },
     "definitions" : {
         "associationItem" : {
             "properties" : {
@@ -139,5 +139,5 @@
             }
         }
     },
-	"additionalProperties": false
+    "additionalProperties": false
 }
