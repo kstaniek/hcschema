@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 
+# Copyright (c) Klaudisz Staniek.
+# See LICENSE for details.
+
+"""
+Simple validation script
+"""
+
 from jsonschema import validate
 import json
 import requests
