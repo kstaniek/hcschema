@@ -248,25 +248,40 @@
             "type": "object",
             "properties": {
                 "pollingTimeSec": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "requestNodeNeighborUpdate": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 0
                 },
                 "setTargetLevel": {
-                    "type": "number"
+                    "description": "Known issue http://bugzilla.fibaro.com/view.php?id=1125",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1
                 },
                 "setTime": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "turnOff": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 0
                 },
                 "turnOn": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 0
                 },
                 "wakeUpTime": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 }
             },
             "required": [

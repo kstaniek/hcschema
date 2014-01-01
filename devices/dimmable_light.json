@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "Fibaro Home Center Binary Switch JSON Schema",
-    "name": "binary_light",
+    "description": "Fibaro Home Center Dimmer JSON Schema",
+    "name": "dimmable_light",
     "type": "object",
     "properties" : {
         "id" : { 
@@ -22,13 +22,16 @@
         "type": {
             "description" : "Zwave device type",
             "enum": [ 
-                "binary_light"
+                "dimmable_light"
             ]
         },
         "properties": {
             "type": "object",
             "properties": {
                 "UIMessageSendTime": { 
+                    "type": "string"
+                },
+                "buttonType": {
                     "type": "string"
                 },
                 "classConfigure": {
@@ -44,7 +47,7 @@
                     "type": "string"
                 },
                 "color": {
-                    "enum": ["white", "green", "blue"]
+                    "enum": ["white"]
                 },
                 "dead": { 
                     "type": "string" 
@@ -83,6 +86,18 @@
                     "type": "string"
                 },
                 "logTemp": {
+                    "type": "string"
+                },
+                "maxValue": {
+                    "type": "string"
+                },
+                "maxVoltage": {
+                    "type": "string"
+                },
+                "minValue": {
+                    "type": "string"
+                },
+                "minVoltage": {
                     "type": "string"
                 },
                 "meterSupport": {
@@ -132,6 +147,12 @@
                 },
                 "saveLogs": {
                     "enum" : ["0", "1"]
+                },
+                "sceneActivation": {
+                    "type": "string"
+                },
+                "sceneDimingDuration": {
+                    "type": "string"
                 },
                 "sensorSupport": {
                     "type": "string"
@@ -280,10 +301,10 @@
                     "minimum": 0,
                     "maximum": 0
                 },
-                "resetMeter": {
+                "setValue": {
                     "type": "integer",
-                    "minimum": 0,
-                    "maximum": 0
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "turnOff": {
                     "type": "integer",

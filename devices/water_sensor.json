@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "Fibaro Home Center Binary Switch JSON Schema",
-    "name": "binary_light",
+    "description": "Fibaro Home Center Motion Sensor JSON Schema",
+    "name": "water_sensor",
     "type": "object",
     "properties" : {
         "id" : { 
@@ -22,7 +22,7 @@
         "type": {
             "description" : "Zwave device type",
             "enum": [ 
-                "binary_light"
+                "water_sensor"
             ]
         },
         "properties": {
@@ -30,6 +30,39 @@
             "properties": {
                 "UIMessageSendTime": { 
                     "type": "string"
+                },
+                "alarmDelay": { 
+                    "type": "string"
+                },
+                "alarmExclude": { 
+                    "type": "string"
+                },
+                "alarmTimeTimestamp": { 
+                    "type": "string"
+                },
+                "armConditions": { 
+                    "type": "string"
+                },
+                "armConfig": { 
+                    "type": "string"
+                },
+                "armDelay": { 
+                    "type": "string"
+                },
+                "armError": { 
+                    "type": "string"
+                },
+                "armTimeTimestamp": { 
+                    "type": "string"
+                },
+                "armed": { 
+                    "enum": ["0", "1"]
+                },
+                "batteryLevel": {
+                    "type": "string"
+                },
+                "batteryLowNotification": { 
+                    "enum": ["0", "1"]
                 },
                 "classConfigure": {
                     "type": "string"
@@ -42,9 +75,6 @@
                 },
                 "classVersion": {
                     "type": "string"
-                },
-                "color": {
-                    "enum": ["white", "green", "blue"]
                 },
                 "dead": { 
                     "type": "string" 
@@ -67,25 +97,19 @@
                 "endPoint": {
                     "type": "string"
                 },
+                "fibaroAlarm": {
+                    "enum": ["0", "1"]
+                },
                 "isBatteryOperated": {
                     "enum": ["0", "1"]
                 },
-                "isLight": {
-                    "enum": ["0", "1"]
-                },
-                "liliOffCommand": {
-                    "type": "string"
-                },
-                "liliOnCommand": {
+                "lastBreached": {
                     "type": "string"
                 },
                 "log": {
                     "type": "string"
                 },
                 "logTemp": {
-                    "type": "string"
-                },
-                "meterSupport": {
                     "type": "string"
                 },
                 "needConfigure": {
@@ -112,9 +136,6 @@
                 "pollingTimeSec": {
                     "type": "string"
                 },
-                "powerConsumption": {
-                    "type": "string"
-                },
                 "productInfo": {
                     "type": "string"
                 },
@@ -133,13 +154,16 @@
                 "saveLogs": {
                     "enum" : ["0", "1"]
                 },
+                "sceneActivation": {
+                    "type": "string"
+                },
+                "sceneDimingDuration": {
+                    "type": "string"
+                },
                 "sensorSupport": {
                     "type": "string"
                 },
                 "showChildren": {
-                    "enum" : ["0", "1"]
-                },
-                "showEnergy": {
                     "enum" : ["0", "1"]
                 },
                 "smsNotificationID": {
@@ -151,13 +175,22 @@
                 "sortOrder": {
                     "type": "string"
                 },
-                "type": {
+                "tamperAlarm": {
+                    "type": "string"
+                },
+                "tamperNotificationID": {
+                    "type": "string"
+                },
+                "tamperNotificationType": {
+                    "type": "string"
+                },
+                "tamperState": {
+                    "type": "string"
+                },
+                "tamperTimestamp": {
                     "type": "string"
                 },
                 "unit": {
-                    "type": "string"
-                },
-                "unitMeter": {
                     "type": "string"
                 },
                 "unitSensor": {
@@ -170,13 +203,13 @@
                     "type" : "string"
                 },
                 "value": {
-                    "type" : "string"
-                },
-                "valueMeter": {
-                    "type" : "string"
+                    "type": "string"
                 },
                 "valueSensor": {
-                    "type" : "string"
+                    "type": "string"
+                },
+                "wakeUpTime": {
+                    "type": "string"
                 },
                 "zwaveCompany": {
                     "type" : "string"
@@ -217,6 +250,13 @@
             },
             "required": [
                 "UIMessageSendTime",
+                "alarmExclude",
+                "alarmTimeTimestamp",
+                "armConditions",
+                "armConfig",
+                "armError",
+                "armTimeTimestamp",
+                "armed",
                 "classConfigure",
                 "classGeneric",
                 "classSupport",
@@ -228,10 +268,9 @@
                 "emailNotificationID",
                 "emailNotificationType",
                 "endPoint",
+                "fibaroAlarm",
                 "isBatteryOperated",
-                "isLight",
-                "liliOffCommand",
-                "liliOnCommand",
+                "lastBreached",
                 "log",
                 "logTemp",
                 "needConfigure",
@@ -252,6 +291,11 @@
                 "smsNotificationID",
                 "smsNotificationType",
                 "sortOrder",
+                "tamperAlarm",
+                "tamperNotificationID",
+                "tamperNotificationType",
+                "tamperState",
+                "tamperTimestamp",
                 "unit",
                 "useTemplate",
                 "userDescription",
@@ -265,6 +309,11 @@
         "actions": {
             "type": "object",
             "properties": {
+                "armed": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
                 "firmwareUpdate": {
                     "type": "integer",
                     "minimum": 1,
@@ -280,27 +329,16 @@
                     "minimum": 0,
                     "maximum": 0
                 },
-                "resetMeter": {
+                "wakeUpTime": {
                     "type": "integer",
-                    "minimum": 0,
-                    "maximum": 0
-                },
-                "turnOff": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 0
-                },
-                "turnOn": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 0
+                    "minimum": 1,
+                    "maximum": 1
                 }
             },
             "required": [
-                 "pollingTimeSec",
-                 "requestNodeNeighborUpdate",
-                 "turnOff",
-                 "turnOn"
+                "armed",
+                "pollingTimeSec",
+                "requestNodeNeighborUpdate"
             ],
             "additionalProperties": false
         },

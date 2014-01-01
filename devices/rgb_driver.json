@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "Fibaro Home Center Binary Switch JSON Schema",
-    "name": "binary_light",
+    "description": "Fibaro Home Center RGB Controller JSON Schema",
+    "name": "rgb_driver",
     "type": "object",
     "properties" : {
         "id" : { 
@@ -22,13 +22,22 @@
         "type": {
             "description" : "Zwave device type",
             "enum": [ 
-                "binary_light"
+                "rgb_driver"
             ]
         },
         "properties": {
             "type": "object",
             "properties": {
                 "UIMessageSendTime": { 
+                    "type": "string"
+                },
+                "associationMode": {
+                    "type": "string"
+                },
+                "bScaler": {
+                    "type": "string"
+                },
+                "buttonType": {
                     "type": "string"
                 },
                 "classConfigure": {
@@ -44,7 +53,13 @@
                     "type": "string"
                 },
                 "color": {
-                    "enum": ["white", "green", "blue"]
+                    "type": "string"
+                },
+                "currentProgram": {
+                    "type": "string"
+                },
+                "currentProgramID": {
+                    "type": "string"
                 },
                 "dead": { 
                     "type": "string" 
@@ -67,11 +82,23 @@
                 "endPoint": {
                     "type": "string"
                 },
+                "favoriteProgram": {
+                    "type": "string"
+                },
+                "gScaler": {
+                    "type": "string"
+                },
                 "isBatteryOperated": {
                     "enum": ["0", "1"]
                 },
                 "isLight": {
                     "enum": ["0", "1"]
+                },
+                "lastColorSet": {
+                    "type": "string"
+                },
+                "lastUsedPrograms": {
+                    "type": "string"
                 },
                 "liliOffCommand": {
                     "type": "string"
@@ -86,6 +113,9 @@
                     "type": "string"
                 },
                 "meterSupport": {
+                    "type": "string"
+                },
+                "mode": {
                     "type": "string"
                 },
                 "needConfigure": {
@@ -112,10 +142,10 @@
                 "pollingTimeSec": {
                     "type": "string"
                 },
-                "powerConsumption": {
+                "productInfo": {
                     "type": "string"
                 },
-                "productInfo": {
+                "programsSortOrder": {
                     "type": "string"
                 },
                 "pushNotificationID": {
@@ -123,6 +153,12 @@
                 },
                 "pushNotificationType": {
                     "type" : "string"
+                },
+                "rScaler": {
+                    "type": "string"
+                },
+                "rememberColor": {
+                    "type": "string"
                 },
                 "requestNodeNeighborState": {
                     "type": "string"
@@ -149,9 +185,6 @@
                     "type" : "string"
                 },
                 "sortOrder": {
-                    "type": "string"
-                },
-                "type": {
                     "type": "string"
                 },
                 "unit": {
@@ -203,24 +236,30 @@
                 "associationView" : {
                     "type" : "array",
                     "minItems" : 0,
-                    "maxItems" : 3,
+                    "maxItems" : 5,
                     "items" : { "$ref": "#/definitions/associationItem" }
                 
                 },
                 "associationSet" : {
                     "type" : "array",
                     "minItems" : 0,
-                    "maxItems" : 3,
+                    "maxItems" : 5,
                     "items" : { "$ref": "#/definitions/associationItem" }
                 
                 }
             },
             "required": [
                 "UIMessageSendTime",
+                "associationMode",
+                "bScaler",
+                "buttonType",
                 "classConfigure",
                 "classGeneric",
                 "classSupport",
                 "classVersion",
+                "color",
+                "currentProgram",
+                "currentProgramID",
                 "dead",
                 "deviceControlType",
                 "deviceIcon",
@@ -228,12 +267,13 @@
                 "emailNotificationID",
                 "emailNotificationType",
                 "endPoint",
+                "favoriteProgram",
+                "gScaler",
                 "isBatteryOperated",
-                "isLight",
-                "liliOffCommand",
-                "liliOnCommand",
                 "log",
                 "logTemp",
+                "meterSupport",
+                "mode",
                 "needConfigure",
                 "nodeID",
                 "parametersTemplate",
@@ -243,19 +283,28 @@
                 "pollingTimeNext",
                 "pollingTimeSec",
                 "productInfo",
+                "programsSortOrder",
                 "pushNotificationID",
                 "pushNotificationType",
+                "rScaler",
+                "rememberColor",
                 "requestNodeNeighborState",
                 "requestNodeNeighborStateTimeStemp",
                 "saveLogs",
+                "sensorSupport",
                 "showChildren",
+                "showEnergy",
                 "smsNotificationID",
                 "smsNotificationType",
                 "sortOrder",
                 "unit",
+                "unitMeter",
+                "unitSensor",
                 "useTemplate",
                 "userDescription",
                 "value",
+                "valueMeter",
+                "valueSensor",
                 "zwaveCompany",
                 "zwaveInfo",
                 "zwaveVersion"  
@@ -285,6 +334,46 @@
                     "minimum": 0,
                     "maximum": 0
                 },
+                "setB": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
+                "setColor": {
+                    "type": "integer",
+                    "minimum": 4,
+                    "maximum": 4
+                },
+                "setG": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
+                "setR": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
+                "setValue": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
+                "setW": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
+                "silentSetColor": {
+                    "type": "integer",
+                    "minimum": 4,
+                    "maximum": 4
+                },
+                "startProgram": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
+                },
                 "turnOff": {
                     "type": "integer",
                     "minimum": 0,
@@ -297,10 +386,19 @@
                 }
             },
             "required": [
-                 "pollingTimeSec",
-                 "requestNodeNeighborUpdate",
-                 "turnOff",
-                 "turnOn"
+                "firmwareUpdate",
+                "pollingTimeSec",
+                "requestNodeNeighborUpdate",
+                "resetMeter",
+                "setB",
+                "setColor",
+                "setG",
+                "setR",
+                "setValue",
+                "setW",
+                "startProgram",
+                "turnOff",
+                "turnOn"
             ],
             "additionalProperties": false
         },

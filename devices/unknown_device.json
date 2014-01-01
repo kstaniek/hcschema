@@ -154,19 +154,29 @@
             "type": "object",
             "properties": {
                 "pollingDeadDevice": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "pollingTimeSec": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "requestNodeNeighborUpdate": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 1
                 },
                 "turnOff": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 0
                 },
                 "turnOn": {
-                    "type": "number"
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 0
                 }
             },
             "required": [
