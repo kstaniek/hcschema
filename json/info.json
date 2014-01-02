@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
-    "description": "Fibaro Home Center Status Info JSON Schema",
-    "name": "weather",
+    "description": "Fibaro Home Center Settings Info JSON Schema",
+    "name": "info",
     "type": "object",
     "properties" : {
         "serialNumber": {

@@ -21,18 +21,28 @@ def main():
     
     url_base = "http://{}/api".format(_HC2_IP_ADDR)
     
+    
+    schema_map = {}
+    for root, subFolders, files in os.walk('.'):
+        for file in files:
+            if file.endswith(".json"):
+                file_name = os.path.join(root, file)
+                with open(file_name) as f:
+                    schema = json.load(f)
+                    schema_map[schema['name']] = schema
+    
+    
     url = url_base + "/settings/info"
     response = requests.get(url, auth=(_USER, _PASS))
-    with open('info.json','r') as f:
-        schema = json.load( f )
-        validate(response.json(), schema)
+    validate(response.json(), schema_map['info'])
+    print("Settings Info Validated")
     
     url = url_base + "/devices"
     device_ids = [ device['id'] for device in requests.get(url, auth=(_USER, _PASS) ).json() ]
         
     print device_ids
-    schema_map = {}
     
+    schema_map = {}
     for root, subFolders, files in os.walk('.'):
         for file in files:
             if file.endswith(".json"):
