@@ -68,6 +68,10 @@
         "batteryLowNotification": {
             "description": "Low Batery Notification Flag",
             "type": "boolean"
+        },
+        "newestStableVersion": {
+            "description": "Newest Stable Version Flag",
+            "type": "boolean"
         }
     },
     "additionalProperties": false
