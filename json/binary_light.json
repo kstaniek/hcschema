@@ -44,7 +44,7 @@
                     "type": "string"
                 },
                 "color": {
-                    "enum": ["white", "green", "blue", "red", "yellow"]
+                    "enum": ["white", "green", "blue", "red", "yellow", "off"]
                 },
                 "dead": { 
                     "type": "string" 
