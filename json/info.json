@@ -70,8 +70,8 @@
             "type": "boolean"
         },
         "newestStableVersion": {
-            "description": "Newest Stable Version Flag",
-            "type": "boolean"
+            "description": "Newest Stable Version",
+            "type": "string"
         }
     },
     "additionalProperties": false
