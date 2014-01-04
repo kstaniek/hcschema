@@ -67,13 +67,8 @@
         }   
     },
     "required": [
-        "id",
         "name",
-        "sectionID",
-        "icon",
-        "defaultSensors",
-        "defaultThermostat",
-        "sortOrder"
+        "sectionID"
     ],    
     "additionalProperties": false
 }
