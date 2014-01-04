@@ -37,10 +37,22 @@ def main():
     validate(response.json(), schema_map['info'])
     print("Settings Info Validated")
     
+    url = url_base + "/rooms"
+    rooms = requests.get(url, auth=(_USER, _PASS)).json()
+    for room in rooms:
+        validate(room, schema_map['room'])
+    print("Rooms Validated")
+    
+    url = url_base + "/sections"
+    rooms = requests.get(url, auth=(_USER, _PASS)).json()
+    for room in rooms:
+        validate(room, schema_map['section'])
+    print("Sections Validated")
+    
     url = url_base + "/devices"
     device_ids = [ device['id'] for device in requests.get(url, auth=(_USER, _PASS) ).json() ]
         
-    print device_ids
+    #print device_ids
     
     schema_map = {}
     for root, subFolders, files in os.walk('.'):
