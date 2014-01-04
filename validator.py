@@ -49,6 +49,14 @@ def main():
         validate(room, schema_map['section'])
     print("Sections Validated")
     
+    url = url_base + "/users"
+    rooms = requests.get(url, auth=(_USER, _PASS)).json()
+    for room in rooms:
+        validate(room, schema_map['user'])
+    print("Users Validated")
+    
+    
+    
     url = url_base + "/devices"
     device_ids = [ device['id'] for device in requests.get(url, auth=(_USER, _PASS) ).json() ]
         
