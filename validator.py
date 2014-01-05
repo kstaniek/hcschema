@@ -38,22 +38,28 @@ def main():
     print("Settings Info Validated")
     
     url = url_base + "/rooms"
-    rooms = requests.get(url, auth=(_USER, _PASS)).json()
-    for room in rooms:
-        validate(room, schema_map['room'])
+    items = requests.get(url, auth=(_USER, _PASS)).json()
+    for item in items:
+        validate(item, schema_map['room'])
     print("Rooms Validated")
     
     url = url_base + "/sections"
-    rooms = requests.get(url, auth=(_USER, _PASS)).json()
-    for room in rooms:
-        validate(room, schema_map['section'])
+    items = requests.get(url, auth=(_USER, _PASS)).json()
+    for item in items:
+        validate(item, schema_map['section'])
     print("Sections Validated")
     
     url = url_base + "/users"
-    rooms = requests.get(url, auth=(_USER, _PASS)).json()
-    for room in rooms:
-        validate(room, schema_map['user'])
+    items = requests.get(url, auth=(_USER, _PASS)).json()
+    for item in items:
+        validate(item, schema_map['user'])
     print("Users Validated")
+    
+    url = url_base + "/globalVariables"
+    items = requests.get(url, auth=(_USER, _PASS)).json()
+    for item in items:
+        validate(item, schema_map['variable'])
+    print("Variables Validated")
     
     
     
