@@ -65,19 +65,6 @@ def main():
     
     url = url_base + "/devices"
     device_ids = [ device['id'] for device in requests.get(url, auth=(_USER, _PASS) ).json() ]
-        
-    #print device_ids
-    
-    schema_map = {}
-    for root, subFolders, files in os.walk('.'):
-        for file in files:
-            if file.endswith(".json"):
-                file_name = os.path.join(root, file)
-                with open(file_name) as f:
-                    schema = json.load(f)
-                    schema_map[schema['name']] = schema
-
-    
     
     for device_id in device_ids:
         url = url_base + "/devices?id={}".format(device_id)
@@ -91,6 +78,19 @@ def main():
         
         print("Device {}({})".format(device_type, device_id)),
         validate(device, schema)
+        print("is valid")
+        
+    
+    url = url_base + "/scenes"
+    scene_ids = [ scene['id'] for scene in requests.get(url, auth=(_USER, _PASS) ).json() ]
+    
+    for scene_id in scene_ids:
+        url = url_base + "/scenes?id={}".format(scene_id)
+        scene = requests.get(url, auth=(_USER, _PASS) ).json()
+        print scene
+        schema = schema_map['scene']
+        print(u"Scene {}({})".format(scene['name'],scene['id']))
+        validate(scene, schema)
         print("is valid")
     
 
