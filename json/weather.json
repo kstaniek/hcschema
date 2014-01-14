@@ -4,44 +4,43 @@
     "name": "weather",
     "type": "object",
     "properties" : {
-            "ConditionCode": { 
-                "type": "string"
-            },
-            "Humidity": { 
-                "type": "string"
-            },
-            "PreviousConditionCode": { 
-                "type": "string"
-            },
-            "PreviousHumidity": { 
-                "type": "string"
-            },
-            "PreviousTemperature": { 
-                "type": "string"
-            },
-            "PreviousWeatherConditionConverted": { 
-                "type": "string"
-            },
-            "PreviousWind": { 
-                "type": "string"
-            },
-            "Temperature": { 
-                "type": "string"
-            },
-            "WeatherCondition": { 
-                "type": "string"
-            },
-            "WeatherConditionConverted": { 
-                "type": "string"
-            },
-            "Wind": { 
-                "type": "string"
-            },
-            "saveLogs": { 
-                "enum" : ["0", "1"]
-            },
-            
+        "ConditionCode": { 
+            "type": "string"
         },
+        "Humidity": { 
+            "type": "string"
+        },
+        "PreviousConditionCode": { 
+            "type": "string"
+        },
+        "PreviousHumidity": { 
+            "type": "string"
+        },
+        "PreviousTemperature": { 
+            "type": "string"
+        },
+        "PreviousWeatherConditionConverted": { 
+            "type": "string"
+        },
+        "PreviousWind": { 
+            "type": "string"
+        },
+        "Temperature": { 
+            "type": "string"
+        },
+        "WeatherCondition": { 
+            "type": "string"
+        },
+        "WeatherConditionConverted": { 
+            "type": "string"
+        },
+        "Wind": { 
+            "type": "string"
+        },
+        "saveLogs": { 
+            "enum" : ["0", "1"]
+        }
+    },
     "required": [
         "ConditionCode",
         "Humidity",
