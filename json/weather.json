@@ -39,6 +39,9 @@
         },
         "saveLogs": { 
             "enum" : ["0", "1"]
+        },
+        "TemperatureUnit": {
+            "enum" : ["C", "F"]
         }
     },
     "required": [
@@ -53,7 +56,8 @@
         "WeatherCondition",
         "WeatherConditionConverted",
         "Wind",
-        "saveLogs"  
+        "saveLogs",
+        "TemperatureUnit"  
     ],
     "additionalProperties": false
 }
