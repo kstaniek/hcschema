@@ -72,6 +72,10 @@
         "newestStableVersion": {
             "description": "Newest Stable Version",
             "type": "string"
+        },
+        "newestBetaVersion": {
+            "description": "Newest Beta Version",
+            "type": "string"
         }
     },
     "additionalProperties": false
