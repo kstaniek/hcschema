@@ -32,11 +32,11 @@
         },
         "oldValue": {
             "description": "Old value",
-            "type": ["integer", "number"]
+            "type": "number"
         },
         "newValue": {
             "description": "New value",
-            "type": ["integer", "number"]
+            "type": "number"
         }
     },
     "additionalProperties": false
