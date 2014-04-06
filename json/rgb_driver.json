@@ -285,7 +285,6 @@
                 "meterSupport",
                 "mode",
                 "needConfigure",
-                "nodeID",
                 "parametersTemplate",
                 "parentID",
                 "pollingRetryError",

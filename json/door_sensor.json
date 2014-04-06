@@ -279,7 +279,6 @@
                 "log",
                 "logTemp",
                 "needConfigure",
-                "nodeID",
                 "parametersTemplate",
                 "parentID",
                 "pollingRetryError",
