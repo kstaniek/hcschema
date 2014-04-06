@@ -245,9 +245,6 @@
                     "maximum": 0
                 }
             },
-            "required": [
-                
-            ],
             "additionalProperties": false
         },
         "created": {
