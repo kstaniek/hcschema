@@ -314,6 +314,9 @@
                     "minimum": 0,
                     "maximum": 0
                 }
+                "wakeUpTime": {
+                    "type": "integer"
+                }
             },
             "required": [
                 "armed",
