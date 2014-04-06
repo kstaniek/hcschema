@@ -25,6 +25,16 @@
                 "window_sensor"
             ]
         },
+        "remoteGatewayId": {
+            "description": "Remote Gateway ID",
+            "type" : "integer",
+            "minimum" : 0 
+        },
+        "remoteDeviceID": {
+            "description": "Remote Device ID",
+            "type" : "integer",
+            "minimum" : 0 
+        },
         "properties": {
             "type": "object",
             "properties": {
