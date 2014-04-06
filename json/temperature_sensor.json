@@ -212,8 +212,6 @@
                 "productInfo",
                 "pushNotificationID",
                 "pushNotificationType",
-                "requestNodeNeighborState",
-                "requestNodeNeighborStateTimeStemp",
                 "saveLogs",
                 "showChildren",
                 "showFireAlarm",
