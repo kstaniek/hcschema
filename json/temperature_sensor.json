@@ -246,8 +246,7 @@
                 }
             },
             "required": [
-                "pollingTimeSec",
-                "requestNodeNeighborUpdate"
+                
             ],
             "additionalProperties": false
         },
