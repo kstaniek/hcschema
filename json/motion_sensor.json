@@ -58,6 +58,9 @@
                 "armed": { 
                     "enum": ["0", "1"]
                 },
+                "batteryLevel": {
+                    "type": "string"
+                },
                 "batteryLowNotification": { 
                     "enum": ["0", "1"]
                 },
