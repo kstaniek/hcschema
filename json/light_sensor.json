@@ -225,37 +225,7 @@
         "actions": {
             "type": "object",
             "properties": {
-                "armed": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 1
-                },
-                "firmwareUpdate": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 1
-                },
-                "pollingTimeSec": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 1
-                },
-                "requestNodeNeighborUpdate": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 0
-                },
-                "wakeUpTime": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "maximum": 1
-                }
             },
-            "required": [
-                "armed",
-                "pollingTimeSec",
-                "requestNodeNeighborUpdate"
-            ],
             "additionalProperties": false
         },
         "created": {
