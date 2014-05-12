@@ -62,6 +62,15 @@
                 "deviceControlType": {
                     "type": "string"
                 },
+                "mode": {
+                    "type": "string"
+                },
+                "nextDrenching": {
+                    "type": "number"
+                },
+                "manualTime": {
+                    "type": "number"
+                },
                 "deviceIcon": {
                     "type": "string"
                 },
